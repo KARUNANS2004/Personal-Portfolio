@@ -39,6 +39,41 @@ homeButton.addEventListener('click',(event)=>{
     });
 })
 
+let targetBlock=document.querySelector('.project');
+
+function updateTargetContent(){
+    let windowWidth=window.innerWidth;
+    if (windowWidth<1000){
+        targetBlock.innerHTML=`
+        <div class="project-left-area-upper">
+            <h1>Weather Website</h1>
+            <p>Wanna know weather? <br> It's here!</p>
+        </div>
+        <div class="project-right-area">
+            <a style="border-radius:20px;" href="https://karunans2004.github.io/Weather-website-firsty-try/" target="_blank"><img src="project 1.jpg" alt="first-project" class="first-project-pic"></a>
+        </div>
+        <div class="project-left-area">
+            <a href="https://karunans2004.github.io/Weather-website-firsty-try/" target="_blank" class="project-one"><h1>View <img src="in-new-tab.svg" alt=""></h1></a>
+         </div>   
+        `;
+    }else{
+        targetBlock.innerHTML=`
+        <div class="project-left-area">
+            <div class="project-left-area-upper">
+                <h1>Weather Website</h1>
+                <p>Wanna know weather? <br> It's here!</p>
+            </div>
+            <a href="https://karunans2004.github.io/Weather-website-firsty-try/" target="_blank" class="project-one"><h1>View <img src="in-new-tab.svg" alt=""></h1></a>
+        </div>
+        <div class="project-right-area">
+            <a href="https://karunans2004.github.io/Weather-website-firsty-try/" target="_blank"><img src="project 1.jpg" alt="first-project" class="first-project-pic"></a>
+        </div>
+        `
+    }
+}
+
+window.addEventListener('load', updateTargetContent);
+window.addEventListener('resize', updateTargetContent);
 
 
 // SMTP js
