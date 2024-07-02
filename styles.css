@@ -96,15 +96,17 @@ main{
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 200px;
     margin-top:50px;
     margin-bottom: 100px;
+    height: auto;
 }
 .left-content{
     display: inline;
     float: left;
     width: 700px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-right: 50px;
 }
 h1.heading{
@@ -142,6 +144,7 @@ h1.heading span.second-text{
 /*Adding circles over the profile pictures*/
 .profile-picture{
     position: relative;
+    right: 0;
 }
 
 .profile-picture:before, .profile-picture:after{
@@ -210,7 +213,6 @@ h1.heading span.second-text{
     border-radius: 10px;
     padding: 5px 20px; 
     transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
-    position: absolute;
     top: 150%;
     animation: to-up 2s ease-in-out forwards;
 }
@@ -636,7 +638,7 @@ ul{
     }
     .content{
         flex-direction: column;
-        gap: 0;
+        gap: 120px;
     }
     .left-content{
         flex-direction: column;
