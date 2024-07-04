@@ -82,6 +82,9 @@ body{
     margin-right: 40px;
     font-size: 16px;
 }
+.right-content-header .menu-icon{
+    display: none;
+}
 .home-button{
     cursor: pointer;
 }
@@ -709,7 +712,7 @@ ul{
         flex-direction: column;
         justify-content: center;
     }
-    .right-content-header{
+    .right-content-header a{
         display: none;
     }
     .connect-left-area .connect-text{
@@ -759,6 +762,13 @@ ul{
     }
     .project-right-area img{
         height:400px;
+    }
+    .right-content-header .menu-icon{
+        display:inline;
+    }
+    .left-content-header{
+        margin: 0;
+        padding: 0;
     }
 }
 
