@@ -17,11 +17,12 @@
             <div class="top" id="top">
                 <div class="left-content-header" id="left-content-header">KNS</div>
                 <div class="right-content-header">
-                    <a href="#" class="home-button">Home</a>
-                    <a href="#projects-container">Projects</a>
-                    <a href="#skills-container" class="skills-button">Skills</a>
-                    <!-- <a href="#">Achievements</a> -->
-                    <a href="#connect-container">Connect</a>
+                        <a href="#" class="home-button tab" >Home</a>
+                        <a href="#projects-container" class="tab">Projects</a>
+                        <a href="#skills-container" class="skills-button tab">Skills</a>
+                        <a href="#connect-container" class="tab">Connect</a>
+                        <img src="menu.svg" alt="menu" class="menu-icon">
+                        <img src="close.svg" alt="close" class="close-icon">
                 </div>
             </div>
         </header>
@@ -112,7 +113,10 @@
                         <!--SMTP js-->
 
                         
-                        <form onsubmit="sendEmail(); reset(); return false" method="POST" name="contact-form">
+                        <!-- <form onsubmit="sendEmail(); reset(); return false" method="POST" name="contact-form">
+                            
+                        </form> -->
+                        <form action="https://api.web3forms.com/submit" method="POST">
                             <label for="firstName"></label>
                             <input type="text" placeholder="First Name" required name="firstName" id="firstName" >
                             <label for="lastName"></label>
@@ -129,6 +133,7 @@
             </div>
         </main>
 
+<!-- Footer-->
         <footer class="bottom-section">
             <hr>
             <div class="footer-container" >
