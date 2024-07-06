@@ -143,6 +143,8 @@ function toggle(isSmaller){
   let topHeader=document.querySelector('.top');
   let rightContentHeader=document.querySelector('.right-content-header');
   menuIconButton.style.display='block';
+  closeIconButton.style.display='none';
+  topHeader.style.height='initial';
   let listOfHeaders=document.querySelectorAll('.tab');
   listOfHeaders.forEach((item)=>{
     item.style.display='none';
