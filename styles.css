@@ -708,6 +708,8 @@ ul{
 
     .connect-right-area form textarea{
         max-width: 100%;
+        min-height: 300px;
+
     }
     .connect-right-area form input[type='email']{
         margin-top: 0px;
@@ -797,6 +799,9 @@ ul{
     }
     .project{
         width: 100%;
+    }
+    #message{
+        min-width: 100%;
     }
 }
 
