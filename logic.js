@@ -81,52 +81,59 @@ window.addEventListener('resize', updateTargetContent);
 
 // Animated navigation bar
 
-let menuIconButton=document.querySelector('.menu-icon');
-let closeIconButton=document.querySelector('.close-icon');
-let topHeader=document.querySelector('.top');
-let rightContentHeader=document.querySelector('.right-content-header');
-menuIconButton.style.display='block';
-  let listOfHeaders=document.querySelectorAll('.tab');
-  listOfHeaders.forEach((item)=>{
-    item.style.display='none';
-  });
-menuIconButton.addEventListener('click', (e)=>{
-  topHeader.style.height='100%';
-  rightContentHeader.style.height='100%';
-  menuIconButton.style.display='none';
-  closeIconButton.style.display='block';
-  listOfHeaders.forEach((item)=>{
-    item.style.display='block';
-  });
-  listOfHeaders.forEach((item)=>{
-    item.addEventListener('click',(e)=>{
-      let newTop=document.querySelector('.top');
-      newTop.style.height='initial';
-      listOfHeaders.forEach((item)=>{
-        item.style.display='none';
+let windowWidth=window.innerWidth;
+if (windowWidth<1100){
+  let menuIconButton=document.querySelector('.menu-icon');
+  let closeIconButton=document.querySelector('.close-icon');
+  let topHeader=document.querySelector('.top');
+  let rightContentHeader=document.querySelector('.right-content-header');
+
+
+  menuIconButton.style.display='block';
+    let listOfHeaders=document.querySelectorAll('.tab');
+    listOfHeaders.forEach((item)=>{
+      item.style.display='none';
+    });
+  menuIconButton.addEventListener('click', (e)=>{
+    topHeader.style.height='100%';
+    rightContentHeader.style.height='100%';
+    menuIconButton.style.display='none';
+    closeIconButton.style.display='block';
+    listOfHeaders.forEach((item)=>{
+      item.style.display='block';
+    });
+    listOfHeaders.forEach((item)=>{
+      item.addEventListener('click',(e)=>{
+        let newTop=document.querySelector('.top');
+        newTop.style.height='initial';
+        listOfHeaders.forEach((item)=>{
+          item.style.display='none';
+        });
+        menuIconButton.style.display='block';
+        closeIconButton.style.display='none';
       });
-      menuIconButton.style.display='block';
-      closeIconButton.style.display='none';
     });
   });
-});
 
-closeIconButton.addEventListener('click', (e)=>{
-  closeIconButton.style.display='none';
-  menuIconButton.style.display='block';
-  topHeader.style.height='initial';
-  listOfHeaders.forEach((item)=>{
-    item.style.display='none';
+  closeIconButton.addEventListener('click', (e)=>{
+    closeIconButton.style.display='none';
+    menuIconButton.style.display='block';
+    topHeader.style.height='initial';
+    listOfHeaders.forEach((item)=>{
+      item.style.display='none';
+    });
   });
-});
+}
 
 
 window.addEventListener('resize',()=>{
   let windowWidth=window.innerWidth;
   if (windowWidth<1100){
     toggle(true);
+    return;
   }else if(windowWidth>1100){
     removeToggle(true);
+    return;
   }
 })
 
@@ -186,5 +193,5 @@ function removeToggle(islarger){
   let listOfHeaders=document.querySelectorAll('.tab');
   listOfHeaders.forEach((item)=>{
     item.style.display='block';
-  })
+  });
 }
