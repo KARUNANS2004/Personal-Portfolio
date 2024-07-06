@@ -83,8 +83,12 @@ window.addEventListener('resize', updateTargetContent);
 
 
 
+let loadScreenWidth=window.innerWidth;
 window.addEventListener('resize',()=>{
   let windowWidth=window.innerWidth;
+  if(loadScreenWidth<1100){
+    toggle(true);
+  }
   if (windowWidth<1100){
     toggle(true);
   }else if(windowWidth>1100){
@@ -150,5 +154,3 @@ function removeToggle(islarger){
     item.style.display='block';
   })
 }
-
-
