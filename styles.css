@@ -284,6 +284,9 @@ h1.heading span.second-text{
 .project:nth-child(1){
     background-color: #40E0D0;
 }
+.project:nth-child(2){
+    background-color: #f57634;
+}
 .project-left-area{
     padding-left: 50px;
     padding-right: 50px;
@@ -327,6 +330,8 @@ h1.heading span.second-text{
 }
 
 .project-right-area img{
+    width: 100%;
+    max-width: 550px;
     box-shadow: 0 0 5px 0 grey;
     margin: 10px;
     height: 550px;
