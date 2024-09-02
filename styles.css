@@ -659,12 +659,12 @@ ul{
 @media only screen and (max-width:1100px){
     main{
         flex-direction: column;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .content{
         flex-direction: column;
-        gap: 120px;
+        gap: 250px;
     }
     .left-content{
         flex-direction: column;
@@ -690,6 +690,12 @@ ul{
         justify-content: center;
         align-items: center;
         height: auto;
+    }
+    .projects-tile .project:first-child .project-left-area-upper{
+        margin-left: 50px;
+    }
+    .projects-tile .project:first-child .project-left-area-upper h1{
+        word-wrap: break-word;
     }
     .project-right-area{
         margin-bottom: 20px;
@@ -756,7 +762,7 @@ ul{
         gap: 0;
     }
     .left-footer-area{
-        margin-right: 20px;
+        margin: auto;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -765,7 +771,7 @@ ul{
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-right: 20px;
+        margin: auto;
     }
     .connect-pic{
         display: none;
@@ -801,7 +807,7 @@ ul{
         display: none;
     }
     .left-content-header{
-        margin: 20px;
+        margin-left: 10px;
         padding: 0;
     }
     .project{
